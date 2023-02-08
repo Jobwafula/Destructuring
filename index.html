@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/@chinchang/code-flask"></script>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center">The Concept Of Destructuring</h1>
+
+        <div class="card" style="width:400px">
+            <img class="card-img-top" style="height: 100px;width: 100px;" src="./job.jpeg" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Job Wafula</h4>
+              <p class="card-text">software developer</p>
+              <a href="http://wafulajob.netlify.app" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        <h1><small>Hello my name is <kbd>Job</kbd>, a software developer with a strong background in javascript. I would
+            like to share my knowledge of <mark>destructuring</mark>, a powerful feature in programming.
+            I believe that  understanding  and utilizing destructuring can greatly improve the readability
+            and maintanability of code, and i look forward to demonstrating its benefits through examples
+            and exercises.
+
+        </small></h1>
+    </div>
+    <div class="container jumbotron">
+         
+    <p>Destructuring is a feature in modern programming languages, particularly in <mark>EcmaScript</mark> 
+        that allows extracting data from arrays , objects ,maps and sets them into separate variables making it easier 
+        to work with complex data structures.
+    </p>
+
+
+    <p>The first step to understanding destructuring is to understand the data structures that it opearates on
+        , specifically arrays and objects.
+        usage of arrays and objects is essential in using destructuring effectively.
+    </p>
+
+    </div>
+
+    <div class="container jumbotron">
+        <p>Here is an example of an array in javascript,</p>
+    
+            <pre id="code-container">
+                 const cities = ["Nairobi","Mombasa","Bungoma"];
+           
+        </pre>
+        
+        
+
+        
+
+        <p>This array 'cities' has three elements: "Nairobi","Mombasa" and "Bungoma".</p>
+
+
+        <p>Here is an example of an object in javascript,</p>
+    
+            <pre id="code-container">
+                 const person= {
+                    firstName:"Job",
+                    LastName:"Wafula";
+                    address:{
+                        city:"Bungoma",
+                        street:"123 Main st"
+                    }
+                 }
+           
+        </pre>
+        
+        <p>This object 'person' has three key-value pairs: "firstName","LastName" and "address".</p>
+    </div>
+    </div>
+    <div class="container jumbotron">
+        <p>Destructuring makes it easy to extract only what is needed.</p>
+        <p>Here is the old way of assigning array items to a variable</p>
+        <pre>
+            const cities =["Nairobi","Mombasa","Bungoma"];
+            
+
+            // old way
+            const Mtwara = cities[0];
+            const Dodoma = cities[1];
+            const Arusha= cities[2];
+        </pre>
+        <p>But with destructuring this is how easy it is.</p>
+
+        <pre>
+            const cities =["Nairobi","Mombasa","Bungoma"];
+            const [Mtwara,Dodoma,Arusha] = cities;
+
+        </pre>
+        <p>If we only need Dodoma and arusha, this is how it is done:</p>
+            <pre>
+                const cities =["Nairobi","Mombasa","Bungoma"];
+                const [,Dodoma,Arusha] = cities;
+
+            </pre>
+        <p>Destructuring comes in handy when a function returns an array:</p>
+        <pre>
+            function calculate(a,b){
+                const add = a+b;
+                const subtract = a-b;
+                const divide = a/b;
+                const multiply = a*b;
+                return [add,subtract,divide,divide,multiply ];
+            }
+            const [add, subtract, multiply, divide] = calculate(4, 7);
+        </pre>
+    </div>
+
+    <div class="container jumbotron">
+        <h1>why destructuring?</h1>
+        <p>Destructuring in React is a useful concept to understand because it allows
+             you to extract values from arrays, objects, and other data structures in a convenient and readable manner. By destructuring, you can simplify your code, reduce the amount of boilerplate, and make it easier to maintain. Additionally, destructuring can help you write more expressive and meaningful code, and make it easier to understand what your code is doing, especially when working with complex data structures. Overall, destructuring is a valuable tool in a React developer's toolkit that can improve the readability, 
+            maintainability, and efficiency of your code.</p>
+            <p>Welcome again to my next upcoming tutorials,</p>
+    </div>
+    <div class="container ">
+        <div class="row">
+            <div class="col-sm-8">
+                <ul>
+                    <li><i class="fab fa-twitter"><a href=""></a></i></li>
+                    <li> <i class="fab fa-youtube"></i> </li>
+                    <li> <i class="fab fa-linkedin"></i> </li>
+                    <li><i class="fab fa-facebook"></i> </li>
+                    <li> <i class="fab fa-instagram"></i> </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <a href="http://wafulajob.netlify.app">visit my website</a>
+            </div>
+        </div>
+        
+    </div>
+    
+
+
+
+    <!-- initializing code conatiner -->
+
+
+    <script>
+        var codeContainer = codeFlask.run('#code-container',{
+            language: 'javascript',
+            lineNumbers:true
+        });
+    </script>
+    <script>
+        
+    </script>
+
+   
+    
+</body>
+</html>

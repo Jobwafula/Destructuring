@@ -1,0 +1,11 @@
+pre{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; */
+}
+ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
